@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="header">
+      <span>Cadastro de Clientes</span>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div class="form-container">
+      <form id="clientForm">
+        <label for="m-nome">Nome</label>
+        <input id="m-nome" type="text" required />
+
+        <label for="m-email">Email</label>
+        <input 
+          id="m-email" 
+          type="email" 
+          pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" 
+          title="Por favor, insira um email válido, contendo '@' e um domínio"
+          required 
+        />
+
+        <label for="m-telefone">Telefone</label>
+        <input 
+          id="m-telefone" 
+          type="tel" 
+          maxlength="11" 
+          pattern="^\d{11}$" 
+          title="O telefone deve conter exatamente 11 dígitos numéricos"
+          required 
+        />
+
+        <button type="submit" id="btnSalvar">Salvar</button>
+      </form>
+    </div>
+
+    <!-- Tabela de Clientes -->
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Os dados serão inseridos dinamicamente pelo JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Script de Interação com a API -->
+  <script src="script.js"></script>
+</body>
+
+</html>
