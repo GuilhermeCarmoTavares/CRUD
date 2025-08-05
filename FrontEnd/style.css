@@ -28,7 +28,7 @@ button {
 }
 
 .header {
-  min-height: 70px;
+  min-height: 71px;
   display: flex;
   align-items: center;
   justify-content: space-between;
